@@ -2,14 +2,36 @@ import sys
 
 def parseInput(userInput):
     userInput = userInput.split()
+    print(userInput)
     for x in userInput:
-        if x.lower() not in commands:
+        if x.lower() not in commandsList:
             userInput.remove(x)
-    if(userInput == "exit"):
-        sys.exit()
-    
-#I'm think that this is where something is going to be printed, such as the room description
     print("")
 
-commands = ["north","east","south","west"]
+def exitGame():
+    confirm = input("Are you sure? [y/n]>")
+    if confirm == "y":
+        sys.exit()
+
+def north():
+    print("going north")
+
+def east():
+    print("going east")
+
+def south():
+    print("going south")
+
+def west():
+    print("going west")
+
+commandsList = ["north","east","south","west","exit"]
+commands = ["bullshit": print("bullshit"),
+            "exit": exitGame(),
+            "quit": exitGame(),
+            "north": north(),
+            "east": east(),
+            "south": south(),
+            "west": west()
+]
         
