@@ -13,8 +13,9 @@ while gameState == GameState.start:
     input("Press any key to continue...\n")
     gameState = GameState.playing
 
+print("You are now playing the python text-based adventure game!")
+
 while gameState == GameState.playing:
-    print("You are now playing the python text-based adventure game!")
     userInput = input(">") 
     TextParser.parseInput(userInput)
     
